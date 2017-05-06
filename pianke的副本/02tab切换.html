@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        html,body,ul,li{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .tabs-nav::after{
+            content: '';
+            clear: both;
+            display: block;
+            width: 100%;
+            border-bottom: 1px solid #47a3da;
+        }
+        .tabs-nav>li{
+            float: left;
+            border:1px solid #becbd2;
+            border-bottom:0px ;
+            margin-right: 5px;
+            position: relative;
+        }
+        .tabs-nav>li>a{
+            display: block;
+            padding: 0 20px;
+            line-height: 30px;
+            text-decoration: none;
+            color: #000000;
+            font-size: 14px;
+        }
+
+        .active::after{
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: -1px;
+            width: 100%;
+            border-bottom: 1px solid #FFFFFF;
+        }
+
+        .tabs-content{
+            display: none;
+        }
+        .tabs-content:first-child{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div class="tabs" id="tabs1">
+    <ul class="tabs-nav">
+        <li><a href="#">折扣</a></li>
+        <li class="active"><a href="#">活动</a></li>
+        <li><a href="#">优惠</a></li>
+        <li><a href="#">其他</a></li>
+    </ul>
+    <div class="tabs-cnt">
+        <div class="tabs-content">
+            111111
+        </div>
+        <div class="tabs-content">
+            222222
+        </div>
+        <div class="tabs-content">
+            333333
+        </div>
+        <div class="tabs-content">
+            444444
+        </div>
+    </div>
+</div>
+
+</body>
+<script>
+        function TabSwitch(id) {
+            var theTab = document.getElementById(id);
+            this.allBtn = theTab.querySelectorAll(".tabs-nav>li");
+            this.allDiv = theTab.querySelectorAll(".tabs-content");
+        }
+
+
+        TabSwitch.prototype.addClick = function () {
+            var _this = this;
+
+            for(var i= 0; i< this.allBtn.length; i++){
+                //this指的是最外面的tab
+                this.allBtn[i].index = i;
+
+                this.allBtn[i].onclick = function () {
+                   //更改之前按钮的class改为空 当前点击按钮的类名 active
+                    //对应的div的display为none 当前的类型是div1;
+                   for(var j = 0; j < _this.allBtn.length;j++){
+                       _this.allBtn[j].className = "";
+                       _this.allDiv[j].style.display = "none";
+
+                   }
+                     this.className = "active";
+                    _this.allDiv[this.index].style.display = "block";
+//                    console.log( _this.allDiv[i]);
+                }
+            }
+        };
+        var tab  = new TabSwitch("tabs1");
+        tab.addClick();
+</script>
+</html>
