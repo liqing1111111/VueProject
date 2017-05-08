@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title></title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+
+    <![endif]-->
+    <link href="css/sty.css" rel="stylesheet">
+    <link href="css/clientCss.css" rel="stylesheet">
+    <script src="bower_components/vue/dist/vue.js"></script>
+</head>
+<body>
+<div class="all">
+    <div class="login" id="login_form">
+        <div class="close-login-box" id="close-login-box"></div>
+        <div class="login-box">
+            <div class="pianke-text">世界很美, 而你正好有空</div>
+            <div class="type-title-cpt"><span class="active">登录</span> <span class="">注册</span></div>
+            <div class="login-content">
+                <div class="login-warn"></div>
+                <div class="login-input"><input type="text" placeholder="输入邮箱或手机号"></div>
+                <div class="login-input"><input type="password" placeholder="密码"></div>
+                <div class="forget-psw"><a href="../../pages/set/getCaptcha.html?type=2">忘记密码?</a></div>
+                <div class="login-btn">登录</div>
+            </div>
+            <div class="register-content" style="display: none;"><img
+                    src="http://qnstatic.pianke.me/public/assets/img/pianke-code.png"></div>
+            <div class="login-others-way">
+                <div>社区帐号登录:</div>
+                <div class="share-cpt">
+                    <div class="share-sina"></div>
+                    <div class="share-wechat"></div>
+                    <div class="share-qq"></div>
+                    <div class="share-dou"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="header">
+        <nav id="navDiv" style="display: block; transition: all 0.6s;"
+             class="navbar navbar-default navbar-fixed-top header">
+            <div class="container">
+                <ul class="nav nav-pills navbar">
+
+                    <li role="presentation"><a href="#" class="logo"></a></li>
+                    <li><a>首页</a></li>
+                    <li><a>阅读</a></li>
+                    <li><a>电台</a></li>
+                    <li><a>碎片</a></li>
+                    <li><a>客户端</a></li>
+                </ul>
+                <div class="navbar-icon">
+                    <div class="editer">
+                        <div>
+                            <img src="img/firstImg/edit-icon.png">
+                        </div>
+
+                    </div>
+                    <div class="login-btn" id="login-btn">
+                        <div>登录&nbsp;<span>/</span>&nbsp;注册</div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </nav>
+
+    </div>
+    <div class="container">
+        <div class="top-container">
+            <div class="top-content"><p>世界很美，<br>而你正好有空。</p>
+                <p class="top-des">Stay with me，look around the world － 片刻V5.0</p>
+                <div class="top-btn ios-btn"><a href="https://itunes.apple.com/us/app/pian-ke/id791086961?mt=8" target="_blank"></a>
+                    iOS下载
+                </div>
+                <div class="top-btn android-btn"><a href="https://qnstatic.pianke.me/apk/pianke_v5.0.5_pianke.apk"></a>
+                    Android下载
+                </div>
+                <div @mouseover="toShow" class="client-code">
+                    <div v-show="isShow" class="client-code-b"></div>
+                </div>
+            </div>
+        </div>
+        <div class="introduce-container">
+            <div class="client-title title-one"><p class="title">01 <span>白 + 黑模式</span></p>
+                <p class="des">白天阅读、夜晚聆听，<br>
+                    不同的时间就是要有不同的享受。</p></div>
+            <div class="client-one"><img src="http://qnstatic.pianke.me/public/assets/img/client1.png" alt=""
+                                         width="841px"></div>
+            <div class="client-two">
+                <div><img src="http://qnstatic.pianke.me/public/assets/img/client3.png" alt="" width="360px">
+                    <div class="client-title title-two"><p class="title">02 <span>直播</span></p>
+                        <p class="des">夜阑人静，给你最美的声音和故事</p></div>
+                </div>
+            </div>
+            <div class="client-three">
+                <div>
+                    <div class="client-title title-three"><p class="title">03 <span>片刻社区</span></p>
+                        <p class="des">随心所欲的诉说，等你来和应</p></div>
+                    <img src="http://qnstatic.pianke.me/public/assets/img/client4.png" alt="" width="360px"></div>
+            </div>
+            <div class="client-four">
+                <div><img src="http://qnstatic.pianke.me/public/assets/img/client5.png" alt="" width="360px">
+                    <div class="client-title title-four"><p class="title">04</p>
+                        <p class="title-des">生活馆，造有情之物</p>
+                        <p class="des">生活不只诗和远方，还有对美好事物的拥有</p></div>
+                </div>
+            </div>
+            <div class="client-bottom"><p>文字，电台，音乐，好物，满足你所有关于美好事物的想象。<br>
+                五个版本的更迭，片刻已经陪伴无数人度过了他们的孤单的时刻，<br>
+                如果你也有想表达的，在这里，永远有人在关注你。</p>
+                <div class="top-btn ios-btn"><a href="https://itunes.apple.com/us/app/pian-ke/id791086961?mt=8"
+                                                target="_blank"></a>iOS下载
+                </div>
+                <div class="top-btn android-btn"><a href="https://qnstatic.pianke.me/apk/pianke_v5.0.2_pianke.apk"></a>Android下载
+                </div>
+                <div @mouseover="toShow" class="client-code">
+                    <div v-show="isShow" class="client-code-b"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="foot">
+            <div class="foot-logo"></div>
+            <div class="foot-link">
+                <span>
+                    <a>关于我们</a>
+                    <a>友情链接</a>
+                    <a>片刻帮助</a>
+                    <a>意见反馈</a>
+                    <a>成长记忆</a>
+                </span>
+                <br>
+                <span>
+                    All rights reserved © 2016 pianke.me /蜀ICP备12022689号-1
+                </span>
+            </div>
+            <div class="foot-icon">
+                <div class="foot-app">
+
+                </div>
+                <div class="foot-weibo">
+
+                </div>
+                <div class="foot-wechat" id="we">
+
+                    <p class="towMa" id="towMa"></p>
+                </div>
+                <div class="foot-safe" style="width: 80px">
+
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <div class="maoDian" id="maoDian">
+        <a></a>
+    </div>
+
+
+</div>
+</body>
+<script>
+
+    var vm = new Vue({
+        el:'.all',
+        data:{
+            isShow:false
+        },
+        methods:{
+            toShow:function () {
+                this.isShow = !this.isShow;
+            }
+
+        }
+
+
+    })
+
+    var mao = document.getElementById("maoDian");
+    window.onscroll = function () {
+        var top = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+        var node = document.getElementById("navDiv");
+        if (top < 50) {//500就是滚动条滚动到的位置，大于500才显示
+            node.style.display = 'block';
+        } else {
+            node.style.display = 'none';
+        }
+
+        if (top > 300) {
+            mao.style.display = "block";
+
+
+        } else {
+            mao.style.display = "none";
+        }
+        mao.onclick = function () {
+            document.documentElement.scrollTop = document.body.scrollTop = 0;
+        }
+
+    };
+</script>
+</html>

@@ -22,7 +22,7 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url('../img/head_logo.png');
+    background-image: url('../img/firstImg/head_logo.png');
 
 }
 
@@ -147,7 +147,7 @@
 
 .close-login-box {
     cursor: pointer;
-    background-image: url('../img/close.png');
+    background-image: url('../img/firstImg/close.png');
     background-size: 20px;
     height: 300px;
     background-position: top right;
@@ -166,7 +166,7 @@
     margin-left: -250px;
     height: 690px;
     background-repeat: no-repeat;
-    background-image: url('../img/login_bg.png');
+    background-image: url('../img/firstImg/login_bg.png');
     background-size: cover;
 }
 
@@ -298,20 +298,20 @@
 }
 
 .share-cpt .share-sina {
-    background-image: url('../img/foot-sinah.png');
+    background-image: url('../img/firstImg/foot-sinah.png');
 }
 
 .share-cpt .share-wechat {
     position: relative;
-    background-image: url('../img/wechat.png');
+    background-image: url('../img/firstImg/wechat.png');
 }
 
 .share-cpt .share-qq {
-    background-image: url('../img/qq.png');
+    background-image: url('../img/firstImg/qq.png');
 }
 
 .share-cpt .share-dou {
-    background-image: url('../img/dou.png');
+    background-image: url('../img/firstImg/dou.png');
 }
 
 .login-content {
@@ -326,7 +326,7 @@
 
     width: 100%;
     height: 570px;
-    background: url("../img/bg.png");
+    background: url("../img/firstImg/bg.png");
     background-size: 100% 100%;
 }
 
@@ -351,7 +351,7 @@
 .focus-picture div:nth-child(1) {
     width: 480px;
     height: 480px;
-    background-image: url("../img/1.jpg");
+    background-image: url("../img/firstImg/1.jpg");
     overflow: hidden;
     position: relative;
 }
@@ -436,7 +436,7 @@
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    background-image: url('../img/play-icon.png');
+    background-image: url('../img/firstImg/play-icon.png');
     background-position: center;
     background-repeat: no-repeat;
 
@@ -598,7 +598,7 @@
     float: right;
     position: relative;
 
-    background-image: url("../img/7.jpg");
+    background-image: url("../img/firstImg/7.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -807,7 +807,7 @@ a {
     margin-left: 13px;
     width: 230px;
     height: 235px;
-    background-image: url('../img/user-bg.png');
+    background-image: url('../img/firstImg/user-bg.png');
     background-size: cover;
 }
 
@@ -935,7 +935,7 @@ footer .foot {
 }
 
 footer .foot .foot-logo {
-    background-image: url("../img/foot-logo.png");
+    background-image: url("../img/firstImg/foot-logo.png");
     width: 100px;
     height: 118px;
     background-size: contain;
@@ -964,36 +964,36 @@ footer .foot .foot-icon {
 
 footer .foot .foot-icon .foot-app {
     float: left;
-    background-image: url("../img/foot-app.png");
+    background-image: url("../img/firstImg/foot-app.png");
 
 }
 footer .foot .foot-icon .foot-app:hover{
-    background-image: url("../img/app.png");
+    background-image: url("../img/firstImg/app.png");
 }
 
 footer .foot .foot-icon .foot-weibo {
     float: left;
-    background-image: url("../img/xinlang.png");
+    background-image: url("../img/firstImg/xinlang.png");
 
 }
 footer .foot .foot-icon .foot-weibo:hover{
-    background-image: url("../img/foot-sinah.png");
+    background-image: url("../img/firstImg/foot-sinah.png");
 }
 
 footer .foot .foot-icon .foot-wechat {
     float: left;
-    background-image: url("../img/wechat.png");
+    background-image: url("../img/firstImg/wechat.png");
     position: relative;
 }
 footer .foot .foot-icon .foot-wechat:hover{
-    background-image: url("../img/foot-wechatH.png");
+    background-image: url("../img/firstImg/foot-wechatH.png");
 }
 .towMa {
     display: none;
     width: 150px;
     height: 150px;
     position: absolute;
-    background-image: url("../img/pianke-code.png");
+    background-image: url("../img/firstImg/pianke-code.png");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -1004,7 +1004,7 @@ footer .foot .foot-icon .foot-wechat:hover{
 
 footer .foot .foot-icon .foot-safe {
     float: left;
-    background-image: url("../img/foot-safe.png");
+    background-image: url("../img/firstImg/foot-safe.png");
 
 }
 
@@ -1032,12 +1032,12 @@ footer .foot .foot-icon a {
     width: 50px;
     height: 50px;
     display: inline-block;
-    background-image: url("../img/back-top.png");
+    background-image: url("../img/firstImg/back-top.png");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 
 }
 .maoDian a:hover{
-    background-image: url("../img/back-topH.png");
+    background-image: url("../img/firstImg/back-topH.png");
 }
